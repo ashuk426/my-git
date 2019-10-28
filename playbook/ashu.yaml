@@ -1,0 +1,35 @@
+--- #comments this is a samplefile for ansible
+- hosts: webnode
+  remote_user: ubuntu
+  sudo: yes
+  connection: ssh
+  gather_facts: yes
+ 
+ 
+
+  tasks:
+  - name: install apache2
+    apt:
+      name: apache2
+      state: present
+  
+  - file:
+      path: /var/www/html/index.html
+      state: absent
+
+  - name: copy indexfile
+    copy: 
+      src: index.html
+      dest: /var/www/html/index.html
+
+
+  
+  - name: copy healthcheck_file
+    copy:
+      src: healthcheck.html
+      dest: /var/www/html/healthcheck.html
+
+  - name: restart apache2 service
+    service:
+      name: apache2
+      state: restarted

@@ -1,0 +1,13 @@
+--- #comments creating images file
+- hosts: webnode
+  remote_user: ubuntu
+  sudo: yes
+  connection: ssh
+  gather_facts: yes
+
+
+
+
+ tasks:
+ - 
+
