@@ -1,0 +1,22 @@
+{
+    "structures":[
+    ],
+    "entities":[
+    ],
+    "metaInfo":{
+        "appName":"ashu",
+        "apiVersion":"1.0",
+        "packageName": "ashu",
+        "generatePresence":true,
+        "generateClient":true,
+        "generateTests":true,
+        "transports":[
+            "amqp",
+            "xmpp",
+            "rest",
+            "websocket",
+            "jsonrpc",
+            "pure"
+        ]
+    }
+}
